@@ -48,6 +48,17 @@ BOOM... its Up and Running
 -------------------------------------
 you may need to change url of localhost according to PORTS available
 -------------------------------------
+------------------------------------
+SS
+------------------------------------
+![image](https://github.com/user-attachments/assets/6581d018-f983-449f-8e4f-35827ac25d85)
+![image](https://github.com/user-attachments/assets/96c5ca92-e136-4bbd-bec9-6ba649987ed0)
+![image](https://github.com/user-attachments/assets/59da5788-8b74-4878-ac42-76c4f8bcd62d)
+
+
+
+
+
 
 
 -------------------------------------

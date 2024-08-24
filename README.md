@@ -1,70 +1,57 @@
-# Getting Started with Create React App
+----------------------------------------
+This project is solely made by Saurabh
+----------------------------------------
+This is a task management application 
+in which we have followinf functionalities
+1. Signup/Login
+2. Cloud Database using mongoDB
+3. Three columns {Todo, Inprogress, Done} Drag&Drop functionality
+4. (CRUD) ->Create, Update, Delete, ViewDetails of tasks
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
-## Available Scripts
+--------------------------------
+How to run on local machine
+--------------------------------
 
-In the project directory, you can run:
+STEP 1->
+Clone the repository
 
-### `npm start`
+STEP 2->
+Open in VSCode/ anyother
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+STEP 3->
+cd frontend
+npm install
+npm start
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+STEP 4->
+cd backend
+npm install
 
-### `npm test`
+STEP 5->
+set your MONGODB_URI by visiting MongoDb atlas 
+in backend/config/config.env
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+STEP 6->
+set your JWT_SECRET_KEY in backend/config/config.env
 
-### `npm run build`
+STEP 7->
+set your PORT in backend/config/config.env
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+ 
+STEP 8->
+nodemon server.js
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+STEP 9->
+BOOM... its Up and Running
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+-------------------------------------
+you may need to change url of localhost according to PORTS available
+-------------------------------------
 
-### `npm run eject`
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
-
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
-
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
-
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+-------------------------------------
+Future Plannings 
+-------------------------------------
+1. Add Google Login/Signup option
+2. Will add on later

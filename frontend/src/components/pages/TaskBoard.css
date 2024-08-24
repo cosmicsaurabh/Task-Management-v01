@@ -1,0 +1,14 @@
+.Mainpage-container {
+  padding: 20px; /* Padding for the container */
+  margin-top: 16%;
+  height: 100vh;
+  width: 100vw;
+  max-width: 100%;
+}
+
+.task-board {
+  display: flex;
+  justify-content: space-around;
+  /* align-items: center; */
+  /* background: #000; */
+}

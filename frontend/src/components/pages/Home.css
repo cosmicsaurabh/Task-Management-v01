@@ -1,0 +1,35 @@
+/* Home.css */
+
+body {
+  margin: 0;
+  font-family: Arial, sans-serif;
+}
+
+.unlogin {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+  background-color: #f5f5f5;
+}
+
+.unlogin-btn {
+  padding: 12px 20px;
+  margin: 10px;
+  border: none;
+  border-radius: 4px;
+  background-color: #3377f5;
+  color: #fff;
+  font-size: 16px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.unlogin-btn:hover {
+  background-color: #2861d0;
+}
+
+.unlogin-btn:focus {
+  outline: none;
+}

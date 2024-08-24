@@ -1,0 +1,115 @@
+/* General Reset */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* Navbar Container */
+.Navbar-container {
+  display: flex; /* Use Flexbox for layout */
+  justify-content: space-between; /* Space between logo and buttons */
+  align-items: center; /* Center items vertically */
+  background-color: #3377f5; /* White background for navbar */
+  border-radius: 6px;
+  padding: 5px;
+  margin-top: 3%;
+  margin-left: 1%;
+  width: 100vw; /* Ensure full width */
+  margin-right: 1%;
+
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); /* Subtle shadow for depth */
+  /*max-width: 98%; Ensure it doesn't exceed screen width*/
+  position: fixed; /* Make the navbar stay at the top */
+  top: 0; /* Stick the navbar to the top */
+  left: 0; /* Align it to the left edge */
+  z-index: 1000; /* Ensure it's above other elements */
+  /* background-color: rgba(0, 0, 0, 0.61); */
+
+  backdrop-filter: blur(15px);
+}
+
+/* Navbar Logo */
+.Navbar-logo img {
+  margin-left: 20%;
+  padding: 10%;
+}
+
+/* Navbar Button Container */
+.Navbar-btn {
+  display: flex; /* Use Flexbox for button layout */
+  gap: 10px; /* Space between buttons */
+  margin-right: 10%;
+}
+
+/* Child Buttons */
+.Navbar-child-btn {
+  background-color: white; /* Button background color */
+  color: #3377f5; /* Text color is primary */
+  border: 2px solid #3377f5; /* Border around the button */
+  border-radius: 5px; /* Rounded corners */
+  padding: 10px 15px; /* Padding for buttons */
+  cursor: pointer; /* Pointer cursor on hover */
+  transition:
+    transform 0.3s ease,
+    background-color 0.3s ease; /* Smooth transition for hover effects */
+  font-weight: bold; /* Bold text for emphasis */
+}
+.Navbar-child-btn-logout {
+  background-color: #f76566; /* Button background color */
+  color: #ffffff; /* Text color is primary */
+  border: 2px solid #3377f5; /* Border around the button */
+  border-radius: 5px; /* Rounded corners */
+  padding: 10px 15px; /* Padding for buttons */
+  cursor: pointer; /* Pointer cursor on hover */
+  transition:
+    transform 0.3s ease,
+    background-color 0.3s ease; /* Smooth transition for hover effects */
+  font-weight: bold; /* Bold text for emphasis */
+}
+
+/* Hover Effects for Buttons */
+.Navbar-child-btn:hover {
+  background-color: #3377f5; /* Change background color on hover */
+  border-style: double;
+  border-color: rgb(255, 255, 255);
+  color: white; /* Change text color to white on hover */
+  transform: translateY(-3px); /* Slight pop-up effect */
+}
+.Navbar-child-btn-logout:hover {
+  background-color: #f76566; /* Change background color on hover */
+  border-style: double;
+  border-color: rgb(255, 255, 255);
+  color: white; /* Change text color to white on hover */
+  transform: translateY(-3px); /* Slight pop-up effect */
+}
+
+/* Responsive Styles */
+@media (max-width: 768px) {
+  .Navbar-container {
+    flex-direction: row; /* Maintain horizontal layout */
+    justify-content: space-between; /* Keep items spaced apart */
+    padding: 5px; /* Ensure consistent padding */
+  }
+
+  .Navbar-btn {
+    gap: 5px; /* Reduce gap on smaller screens */
+  }
+
+  .Navbar-logo img {
+    height: 40px; /* Adjust logo size on smaller screens */
+  }
+}
+
+@media (max-width: 280px) {
+  .Navbar-container {
+    flex-direction: column; /* Stack items vertically on very small screens */
+    align-items: flex-start; /* Align items to the start */
+  }
+
+  .Navbar-btn {
+    width: 100%; /* Full width for button container */
+    justify-content: space-between; /* Space buttons evenly */
+    margin-top: 10px; /* Space above buttons */
+  }
+}

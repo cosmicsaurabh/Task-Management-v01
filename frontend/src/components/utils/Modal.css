@@ -1,4 +1,25 @@
-.modal {
+/* Modal.css */
+
+/* This will apply a blur effect to the entire body */
+body.modal-open {
+  position: relative;
+}
+
+body.modal-open::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.5);
+  filter: blur(4px);
+  z-index: 999;
+  pointer-events: none; /* Allow clicks to pass through */
+}
+
+/* Modal backdrop styling */
+.modal-backdrop {
   position: fixed;
   top: 0;
   left: 0;
@@ -6,24 +27,12 @@
   height: 100%;
   background: rgba(0, 0, 0, 0.5);
   display: flex;
-  justify-content: center;
-  align-items: center;
-  z-index: 1000;
-}
-/* Modal.css */
-.modal-backdrop {
-  position: fixed;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  /* filter: blur(4px); */
-  display: flex;
   align-items: center;
   justify-content: center;
   z-index: 1000;
 }
 
+/* Modal content styling */
 .modal-content {
   background: white;
   padding: 20px;
@@ -31,19 +40,7 @@
   width: 400px;
   max-width: 90%;
   position: relative;
-  border-radius: 5px;
-  margin: 10px;
-}
-.modal-content p {
-  background: white;
-  padding: 20px;
-  border-radius: 8px;
-  width: 400px;
-  max-width: 90%;
-  position: relative;
-  border-radius: 5px;
-  margin: 10px;
-  word-wrap: break-word;
+  z-index: 1001; /* Ensure modal is above the backdrop */
 }
 
 .modal-close {
@@ -55,6 +52,7 @@
   font-size: 25px;
   cursor: pointer;
 }
+
 .modal-content form {
   display: flex;
   flex-direction: column;

@@ -1,17 +1,18 @@
 import React, { useEffect } from "react";
-// import './styles'; // Assuming you create a Modal.css for styling
 import "./Modal.css";
 
 const Modal = ({ children, onClose }) => {
   useEffect(() => {
-    // //console.log('Component rendered');
+    // Add the modal-open class to the body when the modal is open
+    document.body.classList.add('modal-open');
+    
+    // Remove the class when the component is unmounted
     return () => {
-      // //console.log('Component unmounted');
+      document.body.classList.remove('modal-open');
     };
   }, []);
 
   return (
-    // <div className='App' onBlur={4} >
     <div className="modal-backdrop">
       <div className="modal-content">
         <button className="modal-close" onClick={onClose}>
@@ -20,7 +21,6 @@ const Modal = ({ children, onClose }) => {
         {children}
       </div>
     </div>
-    // </div>
   );
 };
 

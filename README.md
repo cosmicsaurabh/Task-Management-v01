@@ -20,23 +20,23 @@ STEP 2->
 Open in VSCode/ anyother
 
 STEP 3->
-cd frontend
-npm install
+cd frontend ->
+npm install ->
 npm start
 
 STEP 4->
-cd backend
+cd backend ->
 npm install
 
 STEP 5->
 set your MONGODB_URI by visiting MongoDb atlas 
-in backend/config/config.env
+in backend/.env
 
 STEP 6->
-set your JWT_SECRET_KEY in backend/config/config.env
+set your JWT_SECRET_KEY in backend/.env
 
 STEP 7->
-set your PORT in backend/config/config.env
+set your PORT in backend/.env
 
  
 STEP 8->
@@ -49,7 +49,7 @@ BOOM... its Up and Running
 you may need to change url of localhost according to PORTS available
 -------------------------------------
 ------------------------------------
-SS
+Glimpse
 ------------------------------------
 ![image](https://github.com/user-attachments/assets/6581d018-f983-449f-8e4f-35827ac25d85)
 ![image](https://github.com/user-attachments/assets/96c5ca92-e136-4bbd-bec9-6ba649987ed0)

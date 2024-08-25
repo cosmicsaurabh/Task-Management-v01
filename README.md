@@ -54,9 +54,10 @@ SS
 ![image](https://github.com/user-attachments/assets/6581d018-f983-449f-8e4f-35827ac25d85)
 ![image](https://github.com/user-attachments/assets/96c5ca92-e136-4bbd-bec9-6ba649987ed0)
 ![image](https://github.com/user-attachments/assets/59da5788-8b74-4878-ac42-76c4f8bcd62d)
-![image](https://github.com/user-attachments/assets/e6b31492-b7bc-4a38-a53d-2786bb0bc53a)
-![image](https://github.com/user-attachments/assets/0fdb4172-0117-4364-b1bc-8ce24a7bddde)
-![image](https://github.com/user-attachments/assets/1a188406-a20e-4b31-8ee8-4f6530d0badb)
+![image](https://github.com/user-attachments/assets/fe403b71-1cd9-4e88-8067-0634f8c78735)
+![image](https://github.com/user-attachments/assets/65a555f2-c889-4935-ab34-cb6982ac4e15)
+![image](https://github.com/user-attachments/assets/45e7cbdc-2d24-44af-bb5f-ab200c6c51ef)
+
 
 
 
@@ -70,4 +71,6 @@ SS
 Future Plannings 
 -------------------------------------
 1. Add Google Login/Signup option
-2. Will add on later
+2. Implement Search
+3. Implement SortBy
+4. Will add on later

@@ -4,6 +4,7 @@ import "./Login.css";
 import { useAuth } from "../store/auth";
 import NavBar from "../utils/NavBar";
 
+
 const Login = () => {
   const [credentials, setCredentials] = useState({
     email: "",
@@ -27,7 +28,7 @@ const Login = () => {
   const handleFormSubmit = async (e) => {
     e.preventDefault();
     try {
-      const response = await fetch("/api/auth/login", {
+      const response = await fetch(`${process.env.REACT_APP_BASE_BACKEND_URL}/api/auth/login`, {
         method: "POST",
         headers: {
           "Content-Type": "application/json",

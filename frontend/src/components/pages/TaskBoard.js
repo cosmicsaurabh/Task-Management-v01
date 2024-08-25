@@ -8,8 +8,8 @@ import SearchBar from "../SearchBar";
 import ViewDetailsModal from "../utils/ViewDetailsModal";
 import axios from "axios";
 import "./TaskBoard.css";
-import NavBar from "../utils/NavBar";
 import "../utils/Column.css";
+
 
 const initialTasks = {
   todo: [],
@@ -25,7 +25,7 @@ const TaskBoard = () => {
 
   const fetchAllUsers = async () => {
     try {
-      const { data } = await axios.get("/api/v1/tasks");
+      const { data } = await axios.get(`${process.env.REACT_APP_BASE_BACKEND_URL}/api/v1/tasks`);
       //console.log("Fetched tasks:", data.taskss); // Add this line for debugging
       return data.taskss;
     } catch (error) {
@@ -83,12 +83,11 @@ const TaskBoard = () => {
         [destination.droppableId]: destinationItems,
       }));
     }
-    // Update on server
     await handleUpdate(movedTask);
   };
 
   const handleDelete = async (taskid) => {
-    await axios.delete(`/api/v1/tasks/delete/${taskid}`);
+    await axios.delete(`${process.env.REACT_APP_BASE_BACKEND_URL}/api/v1/tasks/delete/${taskid}`);
 
     setIsupdated(!isupdated);
   };
@@ -97,7 +96,7 @@ const TaskBoard = () => {
     // //console.log(updatedTask.status)
     try {
       const idd = updatedTask._id;
-      await axios.put(`/api/v1/tasks/edit/${idd}`, {
+      await axios.put(`${process.env.REACT_APP_BASE_BACKEND_URL}/api/v1/tasks/edit/${idd}`, {
         title: updatedTask.title,
         description: updatedTask.description,
         status: updatedTask.status,

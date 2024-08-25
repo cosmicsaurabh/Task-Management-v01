@@ -1,6 +1,3 @@
-/* Modal.css */
-
-/* This will apply a blur effect to the entire body */
 body.modal-open {
   position: relative;
 }
@@ -10,21 +7,14 @@ body.modal-open::before {
   position: absolute;
   top: 0;
   left: 0;
-  width: 100%;
-  height: 100%;
   background: rgba(0, 0, 0, 0.5);
-  filter: blur(4px);
-  z-index: 999;
+  filter: blur(46px);
   pointer-events: none; /* Allow clicks to pass through */
 }
 
 /* Modal backdrop styling */
 .modal-backdrop {
-  position: fixed;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
+  backdrop-filter: blur(4px);
   background: rgba(0, 0, 0, 0.5);
   display: flex;
   align-items: center;
@@ -40,7 +30,6 @@ body.modal-open::before {
   width: 400px;
   max-width: 90%;
   position: relative;
-  z-index: 1001; /* Ensure modal is above the backdrop */
 }
 
 .modal-close {

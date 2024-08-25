@@ -15,7 +15,8 @@ const AddToDo = ({ tasks, setTasks, isupdated, setIsupdated }) => {
     };
     try {
       // Add the new task to the 'todo' list
-      const response = await axios.post("/api/v1/tasks/new", taskWithId);
+      const response = await axios.post(`${process.env.REACT_APP_BASE_BACKEND_URL}/api/v1/tasks/new`, taskWithId);
+      // const response = await axios.post("/api/v1/tasks/new", taskWithId);
       //console.log("ADD KRNE BOLA",taskWithId," ---",isupdated)
       setIsupdated(!isupdated);
       //console.log("ADD KRNE BOLA",taskWithId," ---",isupdated)

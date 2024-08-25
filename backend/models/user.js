@@ -90,7 +90,7 @@ UserSchema.methods.generateToken = async function () {
       },
       process.env.JWT_SECRET_KEY,
       {
-        expiresIn: "1m",
+        expiresIn: JWT_EXPIRES_IN,
       },
     );
   } catch (error) {
@@ -119,5 +119,4 @@ UserSchema.pre("save", async function (next) {
 });
 
 module.exports = mongoose.model("User", UserSchema);
-// const User= mongoose.model("User",UserSchema);
-// export default User;
+

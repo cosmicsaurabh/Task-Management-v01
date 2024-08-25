@@ -23,7 +23,7 @@ const Login = () => {
     });
   };
   const currentUrl = window.location.href;
-  //console.log(currentUrl);
+  ////console.log(currentUrl);
 
   const handleFormSubmit = async (e) => {
     e.preventDefault();
@@ -46,7 +46,7 @@ const Login = () => {
         setErrorMsg("An unexpected error occurred. Please try again.");
       }
     } catch (error) {
-      console.error(error);
+      //console.log(error);
       setErrorMsg("Service is down....try again later");
     }
   };

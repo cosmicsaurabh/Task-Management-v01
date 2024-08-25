@@ -17,11 +17,11 @@ const AddToDo = ({ tasks, setTasks, isupdated, setIsupdated }) => {
       // Add the new task to the 'todo' list
       const response = await axios.post(`${process.env.REACT_APP_BASE_BACKEND_URL}/api/v1/tasks/new`, taskWithId);
       // const response = await axios.post("/api/v1/tasks/new", taskWithId);
-      //console.log("ADD KRNE BOLA",taskWithId," ---",isupdated)
+      ////console.log("ADD KRNE BOLA",taskWithId," ---",isupdated)
       setIsupdated(!isupdated);
-      //console.log("ADD KRNE BOLA",taskWithId," ---",isupdated)
+      ////console.log("ADD KRNE BOLA",taskWithId," ---",isupdated)
 
-      // //console.log("Response from server:", response.data);
+      // ////console.log("Response from server:", response.data);
 
       // Update the tasks state with the newly created task
       setTasks((prevTasks) => ({
@@ -29,7 +29,7 @@ const AddToDo = ({ tasks, setTasks, isupdated, setIsupdated }) => {
         todo: [...prevTasks.todo, response.data.user], // Add the created task from the response
       }));
     } catch (error) {
-      console.error("Error creating task:", error);
+      //console.log("Error creating task:", error);
     }
     setIsModalOpen(false);
   };

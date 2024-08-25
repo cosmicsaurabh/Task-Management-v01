@@ -6,7 +6,7 @@ import NavBar from "../utils/NavBar"; // Import NavBar
 const Register = () => {
   const navigate = useNavigate();
   const { isLoggedIn } = useAuth();
-  const [error, setError] = useState([]);
+  const [errorMsg, setErrorMsg] = useState([]);
   const [doubleCheckPassword, setDoubleCheckPassword] = useState(""); // Correct password confirmation state
   const [user, setUser] = useState({
     firstname: "",
@@ -28,7 +28,7 @@ const Register = () => {
   const handleSubmit = async (e) => {
     e.preventDefault();
     if (user.password !== doubleCheckPassword) {
-      setError(["Passwords do not match."]);
+      setErrorMsg(["Passwords do not match."]);
       return;
     }
     try {
@@ -47,15 +47,15 @@ const Register = () => {
         navigate("/");
       } else if (response.status === 400) {
         const responseData = await response.json();
-        setError(responseData.msg); // Set the error message from the backend
+        setErrorMsg(responseData.msg); // Set the error message from the backend
       } else {
-        //console.log("Error inside response");
-        setError("An unexpected error occurred. Please try again.");
+        ////console.log("Error inside response");
+        setErrorMsg("An unexpected error occurred. Please try again.");
       }
-      console.log("checking pass", doubleCheckPassword == user.password);
+      //console.log("checking pass", doubleCheckPassword == user.password);
     } catch (err) {
-      console.err("Error", err);
-      setError("An error occurred while registering. Please try again later.");
+      // console.err("Error", err);
+      setErrorMsg("An error occurred while registering. Please try again later.");
     }
   };
 
@@ -116,9 +116,10 @@ const Register = () => {
                   placeholder="Confirm Password"
                 />
               </div>
-              {error.length > 0 && (
+              {/* {errorMsg && <p className="error-message">{errorMsg}</p>} */}
+              {errorMsg.length > 0 && (
                 <ul className="error-message">
-                  {error.map((error, index) => (
+                  {errorMsg.map((error, index) => (
                     <li key={index}>{error}</li>
                   ))}
                 </ul>

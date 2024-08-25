@@ -4,10 +4,10 @@ const connectDb = () => {
   mongoose
     .connect(process.env.MONGODB_URI)
     .then((data) => {
-      console.log(`MongoDb connected with server: ${data.connection.host}`);
+      //console.log(`MongoDb connected with server: ${data.connection.host}`);
     })
     .catch((err) => {
-      console.log(err);
+      //console.log(err);
       throw new Error("Database connection failed");
     });
 };

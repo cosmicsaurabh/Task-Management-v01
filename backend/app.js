@@ -5,7 +5,7 @@ app.use(express.json());
 
 const taskRouter = require("./routes/tasksRoutes");
 const userRouter = require("./routes/userRoutes");
-
+console.log(process.env.BASE_FRONTEND_CORS_URL)
 const corsOptions = {
   origin: process.env.BASE_FRONTEND_CORS_URL,
   credentials: true, //access-control-allow-credentials:true

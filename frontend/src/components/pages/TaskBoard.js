@@ -21,27 +21,27 @@ const TaskBoard = () => {
   const [editingTask, setEditingTask] = useState(null);
   const [viewingTask, setViewingTask] = useState(null);
   const [isupdated, setIsupdated] = useState(false);
-  // //console.log("i ama ta first ",tasks);
+  // ////console.log("i ama ta first ",tasks);
 
   const fetchAllUsers = async () => {
     try {
       const { data } = await axios.get(`${process.env.REACT_APP_BASE_BACKEND_URL}/api/v1/tasks`);
-      //console.log("Fetched tasks:", data.taskss); // Add this line for debugging
+      ////console.log("Fetched tasks:", data.taskss); // Add this line for debugging
       return data.taskss;
     } catch (error) {
-      console.error("Error fetching taskss:", error);
+      //console.log("Error fetching taskss:", error);
       return [];
     }
   };
 
-  // //console.log("i am after fetch all taskss ");
+  // ////console.log("i am after fetch all taskss ");
   const setFun = async () => {
     const taskss = await fetchAllUsers();
-    //console.log("Tasks before filtering:", taskss); // Add this line for debugging
+    ////console.log("Tasks before filtering:", taskss); // Add this line for debugging
     const todo = taskss.filter((user) => user.status === "todo");
     const inprogress = taskss.filter((user) => user.status === "inprogress");
     const done = taskss.filter((user) => user.status === "done");
-    //console.log("Filtered tasks:", { todo, inprogress, done }); // Add this line for debugging
+    ////console.log("Filtered tasks:", { todo, inprogress, done }); // Add this line for debugging
 
     setTasks({ todo, inprogress, done });
   };
@@ -93,7 +93,7 @@ const TaskBoard = () => {
   };
 
   const handleUpdate = async (updatedTask) => {
-    // //console.log(updatedTask.status)
+    // ////console.log(updatedTask.status)
     try {
       const idd = updatedTask._id;
       await axios.put(`${process.env.REACT_APP_BASE_BACKEND_URL}/api/v1/tasks/edit/${idd}`, {
@@ -104,7 +104,7 @@ const TaskBoard = () => {
 
       setEditingTask(null);
     } catch (error) {
-      console.error("Error updating task:", error);
+      //console.log("Error updating task:", error);
     }
     //BCS IO HAVE ALREADY CHANGE THE UI
     setIsupdated(!isupdated);
@@ -116,7 +116,7 @@ const TaskBoard = () => {
   const closeModal = () => {
     setViewingTask(null); // Close the modal
   };
-  // //console.log("i am at last  ", tasks)
+  // ////console.log("i am at last  ", tasks)
 
   return (
     <div className="Mainpage-container">
